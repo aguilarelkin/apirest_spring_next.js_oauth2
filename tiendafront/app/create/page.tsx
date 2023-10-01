@@ -125,9 +125,9 @@ function Create() {
 
                             {createImg
                                 ?
-                                <h1 className="uppercase text-center text-white truncate text-7xl font-mono font-black m-12 ">Imagen</h1>
+                                <h1 className="uppercase text-center text-black truncate text-7xl font-mono font-black m-12 ">Imagen</h1>
                                 :
-                                <h1 className="uppercase text-center text-white truncate text-7xl font-mono font-black m-12 ">Crear </h1>
+                                <h1 className="uppercase text-center text-black truncate text-7xl font-mono font-black m-12 ">Crear </h1>
                             }
                         </div>
                         {

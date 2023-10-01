@@ -156,7 +156,7 @@ function ProtEdit({ params }: CustomId) {
                                     ?
                                     <>
                                         <div>
-                                            <h1 className="uppercase text-center  text-white truncate text-7xl font-mono font-black m-12 ">Actualizar </h1>
+                                            <h1 className="uppercase text-center  text-black truncate text-7xl font-mono font-black m-12 ">Actualizar </h1>
                                         </div>
                                         {
                                             <center>

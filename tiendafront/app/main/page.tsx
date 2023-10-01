@@ -203,7 +203,7 @@ function Main({ params }: CustomId) {
                       }
                     </tbody>
                   </table>
-                  <div className="m-12">
+                  <div className="mr-80 ml-80">
                     <Pagina pageTotal={pageTotal} pagePro={pagePro} total={total} />
                   </div>
                 </>
