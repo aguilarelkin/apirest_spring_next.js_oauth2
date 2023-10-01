@@ -1,0 +1,106 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/tiendafront/node_modules
+/tiendafront/.pnp
+/tiendafront/.pnp.js
+
+# testing
+/tiendafront/coverage
+
+# next.js
+/tiendafront/.next/
+/tiendafront/out/
+
+# production
+/tiendafront/build
+
+# misc
+/tiendafront/.DS_Store
+/tiendafront/*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+#BACKEND
+/tiendafront/HELP.md
+/tiendafront/target/
+/tiendafront/!.mvn/wrapper/maven-wrapper.jar
+/tiendafront/!**/src/main/**/target/
+/tiendafront/!**/src/test/**/target/
+
+### STS ###
+/tiendafront/.apt_generated
+/tiendafront/.classpath
+/tiendafront/.factorypath
+/tiendafront/.project
+/tiendafront/.settings
+/tiendafront/.springBeans
+/tiendafront/.sts4-cache
+
+### IntelliJ IDEA ###
+/tiendafront/.idea
+/tiendafront/*.iws
+/tiendafront/*.iml
+/tiendafront/*.ipr
+
+### NetBeans ###
+/tiendafront/nbproject/private/
+/tiendafront/nbbuild/
+/tiendafront/dist/
+/tiendafront/nbdist/
+/tiendafront/.nb-gradle/
+/tiendafront/build/
+/tiendafront/!**/src/main/**/build/
+/tiendafront/!**/src/test/**/build/
+
+### VS Code ###
+/tiendafront/.vscode/
+
+#auth2
+/authorization-app/HELP.md
+/authorization-app/target/
+/authorization-app/!.mvn/wrapper/maven-wrapper.jar
+/authorization-app/!**/src/main/**/target/
+/authorization-app/!**/src/test/**/target/
+
+### STS ###
+/authorization-app/.apt_generated
+/authorization-app/.classpath
+/authorization-app/.factorypath
+/authorization-app/.project
+/authorization-app/.settings
+/authorization-app/.springBeans
+/authorization-app/.sts4-cache
+
+### IntelliJ IDEA ###
+/authorization-app/.idea
+/authorization-app/*.iws
+/authorization-app/*.iml
+/authorization-app/*.ipr
+
+### NetBeans ###
+/authorization-app/nbproject/private/
+/authorization-app/nbbuild/
+/authorization-app/dist/
+/authorization-app/nbdist/
+/authorization-app/.nb-gradle/
+/authorization-app/build/
+/authorization-app/!**/src/main/**/build/
+/authorization-app/!**/src/test/**/build/
+
+### VS Code ###
+/authorization-app/.vscode/
+pagetypescript.tsx
