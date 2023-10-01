@@ -10,6 +10,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
@@ -22,8 +23,8 @@ import org.springframework.web.filter.CorsFilter;
 import java.util.Arrays;
 
 @Configuration
-//@EnableMethodSecurity
-//@EnableResourceServer//configuraciones para el cliente
+@EnableMethodSecurity
+@EnableWebSecurity
 public class ResourceServerConfig  {
 
     @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")

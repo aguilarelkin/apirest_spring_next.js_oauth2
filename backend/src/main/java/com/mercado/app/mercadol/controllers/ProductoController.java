@@ -36,15 +36,15 @@ public class ProductoController {
     @Autowired
     private IUploadService uploadService;
 
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN', 'ROLE_USER'})")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
+    //@Secured({"ROLE_ADMIN", "ROLE_USER"})
     @GetMapping("/products/page/{page}")
     public Page<Producto> getProductoPage(@PathVariable Integer page) {
 
         return productoService.findAllProduct(PageRequest.of(page, 2));
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN', 'ROLE_USER'})")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
+    //@Secured({"ROLE_ADMIN", "ROLE_USER"})
     @GetMapping("/products")
     public ResponseEntity<?> getProductos() {
 
@@ -69,8 +69,8 @@ public class ProductoController {
 
         return new ResponseEntity<List<Producto>>(producto, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@Secured({"ROLE_ADMIN"})
     @GetMapping("/product/{id}")
     public ResponseEntity<?> getProduct(@PathVariable Long id) {
         Optional<Producto> producto;
@@ -91,8 +91,8 @@ public class ProductoController {
 
         return new ResponseEntity<Optional<Producto>>(producto, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@Secured({"ROLE_ADMIN"})
     @GetMapping("/product/p/{nombre}")
     public ResponseEntity<?> getProductName(@PathVariable String nombre) {
         Producto producto;
@@ -113,8 +113,8 @@ public class ProductoController {
 
         return new ResponseEntity<Producto>(producto, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+   // @Secured({"ROLE_ADMIN"})
     @PostMapping("/product/c")
     public ResponseEntity<?> createProduct(@Valid @RequestBody Producto producto, BindingResult result) {
         Producto productoCreate = null;
@@ -142,8 +142,8 @@ public class ProductoController {
 
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@Secured({"ROLE_ADMIN"})
     @PutMapping("/product/u/{id}")
     public ResponseEntity<?> updateProduct(@Valid @RequestBody Producto producto, BindingResult result, @PathVariable Long id) {
 
@@ -185,8 +185,8 @@ public class ProductoController {
 
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@Secured({"ROLE_ADMIN"})
     @DeleteMapping("/product/d/{id}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
         Map<String, Object> response = new HashMap<>();
@@ -210,8 +210,8 @@ public class ProductoController {
 
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
     }
-    @PreAuthorize("hasAuthority({'ROLE_ADMIN'})")
-    @Secured({"ROLE_ADMIN"})
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@Secured({"ROLE_ADMIN"})
     @PostMapping("/product/upload")
     public ResponseEntity<?> upload(@RequestParam("archivo") MultipartFile archivo, @RequestParam("id") Long id) {
         Map<String, Object> response = new HashMap<>();
@@ -243,8 +243,8 @@ public class ProductoController {
 
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
-   /* @PreAuthorize("hasAuthority({'ROLE_ADMIN', 'ROLE_USER'})")
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})*/
+   /*  @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
+    //@Secured({"ROLE_ADMIN", "ROLE_USER"})*/
     @GetMapping("/uploads/img/{nombreFoto:.+}")
     public ResponseEntity<Resource> verFoto(@PathVariable String nombreFoto) {
 
